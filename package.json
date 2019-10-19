@@ -1,0 +1,19 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sandjai/components.git"
+  },
+  "author": "Grigory Semakin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sandjai/components/issues"
+  },
+  "homepage": "https://github.com/Sandjai/components#readme"
+}

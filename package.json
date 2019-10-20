@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "server": "./node_modules/.bin/static .",
+    "lint": "./node_modules/.bin/eslint components/**/*.js"  
+
   },
   "repository": {
     "type": "git",
@@ -16,7 +19,9 @@
     "url": "https://github.com/Sandjai/components/issues"
   },
   "homepage": "https://github.com/Sandjai/components#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.5.1",
     "node-static": "^0.7.11"
   }
 }

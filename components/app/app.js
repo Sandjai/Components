@@ -8,9 +8,7 @@
             let menu = new Menu({
                 el: el.querySelector('.js-menu'),
                 data: {},
-                onPick(item) {
-                  console.log(item);
-                }
+                
             });
 
             menu.setData(
@@ -57,21 +55,23 @@
 
 
 
-            new Form({
+            let form = new Form({
               el: el.querySelector('.js-form'),
+              data: {}    
 
-             onSubmit(form) {
-                menu._addItem({
-                  href: form.getField('href').value,
-                  anchor: form.getField('anchor').value
+          });
 
-                }, el.querySelector('.js-menu-list'));
-                
-                
-                
+          form.addEventListener('save', (event) => {
+            
+             /* menu._addItem({
+                href: form.getField('href').value,
+                anchor: form.getField('anchor').value
 
+              }, el.querySelector('.js-menu-list')); */
+              console.log((event.detail);
+              menu._addItem(event.detail, el.querySelector('.js-menu-list'));
 
-              }
+            
 
           });
 

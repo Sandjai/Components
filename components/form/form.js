@@ -67,11 +67,35 @@
             event.preventDefault();
             
 
-            this.onSubmit(this);
+            this.trigger('save', {
+                href: this.el.querySelector('input[name="href"]').value,
+                anchor: this.el.querySelector('input[name="anchor"]').value
+            });
             event.target.reset();
 
             
 
+        }
+        /**
+         * 
+         * @param {string} eventName 
+         * @param {function} callback 
+         */
+
+        addEventListener(eventName, callback) {
+            this.el.addEventListener(eventName, callback);
+        }
+
+        /**
+         * Генерация события на элементе
+         * @param {string} eventName
+         * @param {*} eventData
+         */
+
+        trigger(eventName, eventData) {
+            let event = new CustomEvent(eventName, {
+            detail: eventData});
+            this.el.dispatchEvent(event);
         }
 
            

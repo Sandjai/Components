@@ -31,14 +31,14 @@
         }
       
         initEvents() {
-          this.$title.addEventListener('click', this.toggleDisplayMenu.bind(this));
+          /*this.$title.addEventListener('click', this.toggleDisplayMenu.bind(this));*/
           this.$menuList.addEventListener('click', this.removeItem.bind(this));
           
         }
         
-        toggleDisplayMenu() {
+        /*toggleDisplayMenu() {
           this.$el.classList.toggle('_open');
-        }
+        }*/
         
         removeItem(ev) {
           let currentRemoveIcon = ev.target,

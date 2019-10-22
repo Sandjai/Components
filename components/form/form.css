@@ -1,0 +1,42 @@
+form[name="collectLinks"] ul {
+    list-style-type: none;
+}
+
+form[name="collectLinks"] input {
+    margin-bottom: .8rem;
+    height: 1.5rem;
+    width: 15rem;
+    border-radius: 5px;
+    border: 1px solid #4c3f99;
+}
+
+form[name="collectLinks"] label {
+    display: block;
+}
+
+
+fieldset {
+    border: 0;
+}
+
+.btn-sbm {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0px;
+    width: auto;
+    background-color: #4c3f99;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 35px;
+    box-shadow: 0 0 5px rgb(56,100,38);
+    
+    
+}
+
+
+.btn-sbm:hover {
+box-shadow: inset 0 4px 15px 0 rgb(56,100,38);
+}
+/*f9e81c*/

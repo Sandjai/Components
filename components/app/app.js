@@ -1,22 +1,39 @@
 (function() {
     'use strict';
 
-    const Menu = window.Menu;
 
     class App { 
         constructor({el}) {
 
-            this.menu = new Menu({
+            let menu = new Menu({
                 el: el.querySelector('.js-menu'),
-                data: {
-                    title: 'Сайты',
-                    items: []
+                data: {},
+                onPick(item) {
+                  console.log(item);
                 }
-
             });
 
-            this.menu.setData({
-                title: 'Сайты2',
+            menu.setData(
+              {
+              title: 'SINGLE PAGE APP',
+              items: [
+                {
+              anchor: 'Яндекс',
+              href: 'yandex.ru'              
+            },          
+            {
+              anchor: 'Гугл',
+              href: 'google.ru'              
+            },          
+            {
+              anchor: 'Рамблер',
+              href: 'rambler.ru'              
+            }]
+          }
+          );
+
+           /* this.menu.setData({
+                title: 'Сайты',
                 items: [
                     {title: 'Первый'},
                     {
@@ -36,12 +53,35 @@
                     {title: 'Третий'},
                     {title: 'Четвертый'}
                   ]
-            });
+            });*/
 
-            
+
+
+            new Form({
+              el: el.querySelector('.js-form'),
+
+             onSubmit(form) {
+                menu._addItem({
+                  href: form.getField('href').value,
+                  anchor: form.getField('anchor').value
+
+                }, el.querySelector('.js-menu-list'));
+                
+                
+                
+
+
+              }
+
+          });
+
+           
 
         }
     }
+
+
+    
 
     // export
     window.App = App;

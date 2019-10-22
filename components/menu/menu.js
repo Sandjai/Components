@@ -18,6 +18,7 @@
         }
 
         render () {
+
             this.$title.innerText = this.data.title;
             this.renderItems(this.data.items, this.$menuList);
         }
@@ -54,16 +55,17 @@
 
         
         _addItem(item, container) {
-          let itemText = item.title,
-              ulEl = document.createElement('ul'),
+          let ulEl = document.createElement('ul'),
               liEl = document.createElement('li'),
               spanEl = document.createElement('span'),
+              spanE2 = document.createElement('span'),
               removeIcon = document.createElement('sup');
               
-          spanEl.textContent = itemText;
+          spanEl.textContent = item.anchor;
+          spanE2.textContent = item.href;
           removeIcon.textContent = ' x';
           
-          liEl.append(spanEl, removeIcon);
+          liEl.append(spanEl, " ", spanE2, removeIcon);
           
           if (item.items) { // а здесь нужно рекурсивно вызвать renderItems,
             liEl.append(ulEl);

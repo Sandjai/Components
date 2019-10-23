@@ -1,6 +1,14 @@
 (function () {
     'use strict';
 
+    const tmpls = window.menuTmpl;
+
+    /**
+     * @typedef {Item} Тип элемента меню
+     * @prop {string} href URL
+     * @prop {string} anchor
+     */
+
     class Menu {
         constructor({el, data}) {
             this.$el = el;
